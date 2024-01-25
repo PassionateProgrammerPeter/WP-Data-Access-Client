@@ -1,0 +1,44 @@
+.pp-container {
+	background-color: transparent;
+	margin: 0 0 3em 0;
+	padding: 0;
+	position: relative;
+}
+
+.unselectable {
+	user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+}
+
+fieldset.pp-fieldset {
+	border: 1px solid #cdcdcd;
+	border-radius: 4px;
+	padding: 0 30px 40px 30px;
+}
+
+fieldset.pp-fieldset > legend {
+	font-weight: bold;
+	padding: 0 10px;
+}
+
+div.notistack-SnackbarContainer {
+	z-index: 999999999; /* notistack z-index in theme has no effect */
+}
+
+.pp-container-explorer .MuiTreeItem-content {
+	padding: 0 8px 0 12px;
+	min-height: 55px;
+}
+
+@media only screen and (max-width: 600px) {
+	.ppToolbarButtons .ppToolbarRefreshIcon {
+		display: none;
+	}
+	.ppToolbarButtons button {
+		font-size: 70%;
+		padding: 8px;
+	}
+}

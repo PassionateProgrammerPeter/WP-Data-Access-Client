@@ -1,0 +1,117 @@
+h4 {
+	margin: 15px 0;
+	padding: 0;
+}
+
+.pp-setting-toolbar {
+	height: 80px;
+	display: grid;
+	grid-template-columns: 1fr auto auto auto;
+	gap: 0;
+}
+
+.pp-setting-buttons-appbar {
+	margin: 0;
+	padding: 0;
+	min-height: unset;
+}
+
+.pp-setting-buttons-appbar > div {
+	margin: 0;
+	padding: 0;
+	padding-left: 6px !important;
+	min-height: unset;
+}
+.MuiToolbar-root.pp-setting-buttons {
+	display: grid;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+.MuiToolbar-root.pp-setting-buttons.pp-settings-buttons-datatables {
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.MuiToolbar-root.pp-setting-buttons.pp-settings-buttons-dataform {
+	grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.pp-setting-buttons button {
+	color: #fff;
+	min-width: 120px;
+}
+.pp-setting-buttons button:hover {
+	background-color: #666;
+	border-radius: 0;
+}
+
+.pp-setting-footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.pp-setting-footer .pp-setting-footer-buttons {
+	display: grid;
+	grid-template-columns: 90px 90px 90px;
+	gap: 20px;
+	padding: 20px;
+	align-items: center;
+	justify-content: center;
+}
+
+button.footer_action_button {
+	color: #fff;
+	border: 1px solid #fff;
+}
+button.footer_action_button:hover {
+	border: 1px solid #fff;
+	background-color: #666;
+}
+button.footer_action_button_apply {
+	background-color: #fff;
+}
+button.footer_action_button_apply:hover {
+	color: #fff;
+	border: 1px solid #fff;
+	background-color: #666;
+}
+
+.pp-settings-container {
+	overflow-y: auto;
+	height: calc(100vh - 193px);
+}
+
+.pp-settings-container > .css-1s85qek-MuiPaper-root-MuiAccordion-root {
+	padding: 0 10px;
+}
+
+/* FORM SETTINGS */
+
+/* TABLE SETTINGS */
+
+/* COLUMN SETTINGS */
+
+.pp-column-settings > .MuiAccordionSummary-content {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.align-label-radio {
+	display: grid;
+    grid-template-columns: auto auto;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#pp-setting-drawer-root .MuiPaper-root.MuiDrawer-paper input#pp-cells-before {
+	padding: 4px 4px 4px 10px;
+}
+
+.MuiPaper-root.MuiAccordion-root:last-of-type {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}

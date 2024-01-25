@@ -1,0 +1,10 @@
+fieldset.pp-fieldset {
+	border: 1px solid #cdcdcd;
+	border-radius: 4px;
+	padding: 0 30px 40px 30px;
+}
+
+fieldset.pp-fieldset > legend {
+	font-weight: bold;
+	padding: 0 10px;
+}

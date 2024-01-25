@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>WP Data Access</title>
+        <style>
+            body {
+                margin: 50px;
+                background-color: #f0f0f1;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1>WP Data Access</h1>
+
+		<h2>Table and Form Builder</h2>
+
+		<div class="pp-container" data-source="{ 'dbs': 'your-database-name', 'tbl': 'your-table-name' }"></div>
+        <script>
+			// See README for configuration
+            window.PP_APP_CONFIG = {
+                urlRoot: "http://localhost/wp-json/wpda/",
+                appDebug: true,
+				skipWpSettings: true,
+				appKeep: true,
+            };
+        </script>
+        <script type="module" src="/src/main.tsx"></script>
+
+    </body>
+</html>

@@ -1,0 +1,103 @@
+/* MEDIA */
+
+.pp-container .pp-form-content .media {
+	border: 1px solid rgba(0, 0, 0, 0.23);
+	border-radius: 4px;
+	padding: 20px;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: 20px;
+}
+
+.pp-container .pp-form-content .media .MuiFormControl-root {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: fit-content;
+	gap: 20px;
+}
+
+.pp-container .pp-form-content .media .actions {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.pp-container .pp-form-content .media .MuiFormControl-root img {
+	width: 100%;
+	box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19) !important;
+	border-radius: 4px;
+}
+
+.pp-container .pp-form-content .media .MuiFormControl-root audio {
+	max-width: 100%;
+}
+
+.pp-container .pp-form-content .media .MuiFormControl-root video {
+	width: 100%;
+}
+
+.pp-container .pp-form-content .media.WP-Attachment .MuiFormControl-root .content {
+	display: grid;
+	grid-template-columns: auto;
+}
+
+.pp-container .pp-form-content .media.WP-Attachment .MuiFormControl-root a {
+	text-align: center;
+	text-decoration: none;
+}
+
+.pp-container .pp-form-content .media.WP-Attachment .MuiFormControl-root a div svg {
+	padding: 5px 20px 20px 20px;
+	font-size: 30px;
+}
+
+.pp-container .pp-form-content .media.WP-Attachment .MuiFormControl-root a .link-label {
+	overflow-wrap: anywhere;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 400px) {
+	.pp-container .pp-form-content .media .actions {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+
+	.pp-container .pp-form-content .media .MuiFormControl-root audio::-webkit-media-controls-timeline {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 430px) {
+	.pp-container .pp-form .MuiCardActions-root {
+		flex-direction: column;
+		gap: 5px;
+	}
+	.pp-container .pp-form .MuiCardActions-root button {
+		width: 100%;
+		margin: 0;
+	}
+}
+
+@media screen and (max-width: 530px) {
+	.pp-container .MuiToolbar-root button.setting {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.pp-container .pp-form-content .media .MuiFormControl-root {
+		width: 100%;
+		justify-content: center;
+	}
+
+	.pp-container .pp-form-content .media .actions {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.pp-container .pp-form-content .media {
+		grid-template-columns: 1fr;
+	}
+}

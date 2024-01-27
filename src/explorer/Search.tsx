@@ -2,6 +2,7 @@ import { Box, IconButton, InputAdornment, TextField } from "@mui/material"
 import { useState } from "react"
 import { MdFilterAlt, MdSearch } from "react-icons/md"
 import SearchSettings from "./SearchSettings"
+import log from "loglevel"
 
 type Props = {
 	search: string,
@@ -18,6 +19,8 @@ const Search = (
 
 ) => {
 
+	log.debug(search, addFilter)
+
 	const [showFilter, setShowFilter] = useState<boolean>(false)
 
 	return (
@@ -25,6 +28,7 @@ const Search = (
 		<Box
 			sx={{
 				position: "relative",
+				marginRight: addFilter ? 0 : "20px",
 			}}
 		>
 			<TextField

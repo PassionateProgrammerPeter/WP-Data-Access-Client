@@ -2,11 +2,16 @@
 import { useEffect, useState } from "react"
 import { RestApi } from "../restapi/RestApi"
 import { Config } from "../utils/Config"
+import { Theme, ThemeProvider } from "@mui/material"
+import { AdminThemeInit } from "../themes/AdminTheme"
+import { TreeView } from "@mui/x-tree-view/TreeView"
+import { TreeItem } from "@mui/x-tree-view/TreeItem"
+import { MdExpandLess, MdExpandMore } from "react-icons/md"
 import { AppType } from "../types/AppType"
+import AppDetails from "./AppDetails"
+import AppLabel from "./AppLabel"
 import Spinner from "../utils/Spinner"
-import AppLine from "./AppLine"
 import log from "loglevel"
-import { Box } from "@mui/material"
 
 const AppList = () => {
 
@@ -52,29 +57,55 @@ const AppList = () => {
 
 	}
 
+	const theme: Theme = AdminThemeInit()
+
 	return (
 
-		<Box>
+		<ThemeProvider theme={theme}>
 			{
-				apps.length === 0 &&
-				<Spinner title="Loading apps..." />
+				apps.length === 0
+
+					?
+
+					<Spinner title="Loading apps..." />
+
+					:
+
+					<TreeView
+						aria-label="Data Apps"
+						defaultCollapseIcon={<MdExpandLess />}
+						defaultExpandIcon={<MdExpandMore />}
+						sx={{
+							gridGap: "0",
+							borderBottom: "1px solid rgba(0, 0, 0, 0.34)",		
+						}}
+					>
+						{
+							...apps.map((app: AppType) => {
+
+								return (
+
+									<TreeItem
+										key={app.appName}
+										nodeId={app.appName}
+										label={
+											<AppLabel
+												app={app}
+											/>
+										}
+									>
+										<AppDetails
+											app={app}
+										/>
+									</TreeItem>
+
+								)
+
+							})
+						}
+					</TreeView>
 			}
-
-			{
-				...apps.map((app: AppType, index: number) => {
-
-					return (
-
-						<AppLine
-							app={app}
-							index={index}
-						/>
-
-					)
-
-				})
-			}
-		</Box>
+		</ThemeProvider>
 
 	)
 

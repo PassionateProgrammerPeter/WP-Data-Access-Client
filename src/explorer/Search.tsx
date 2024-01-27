@@ -25,7 +25,6 @@ const Search = (
 		<Box
 			sx={{
 				position: "relative",
-				marginRight: "20px",
 			}}
 		>
 			<TextField
